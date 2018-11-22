@@ -1,0 +1,72 @@
+/* full image block styles */
+.full-image-block {
+	padding: 3.75rem 0;
+
+	.small {
+		letter-spacing: normal;
+	}
+
+	.card-body {
+		padding: 0px 30px 53px;
+
+		@include media('>=tablet') {
+			padding: 2.5rem 2.5rem 3.125rem;
+		}
+
+		@include media('>=desktop') {
+			padding: 3.8rem 3.75rem 4.8rem;
+		}
+
+		p{
+			margin: 0 0 2.5rem;
+
+			@include media('>=tablet') {
+				margin: 0 0 1.187rem;
+			}
+
+			@include media('>=desktop') {
+				margin: 0 0 2.5rem;
+			}
+		}
+	}
+
+	.card {
+		@include media('<tablet') {
+			margin: 0 -30px;
+		}
+
+		.subtitle {
+			font-size: 1.5rem;
+			line-height: 1.67;
+		}
+	}
+
+	.bg-video-vimeo,
+	.bg-parallax {
+		@include media('<tablet') {
+			position: static;
+			height: 15rem;
+			background-size: cover !important;
+			background-position: 50% 50% !important;
+			background-attachment: inherit !important;
+		}
+	}
+
+	.container {
+		position: relative;
+		z-index: 2;
+	}
+}
+
+.bg-holder {
+	position: relative;
+	overflow: hidden;
+
+	@include media('>=tablet') {
+		padding: 1.875rem 0;
+	}
+
+	@include media('>=desktop') {
+		padding: 3.75rem 0;
+	}
+}

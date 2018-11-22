@@ -1,0 +1,49 @@
+/* banner styles */
+.banner {
+	padding: 0 0 3.75rem;
+
+	.text-holder {
+		background: white;
+		margin: -18.125rem 0 0;
+		padding: 2.45rem .312rem 0;
+
+		@include media('>=phone') {
+			margin: -12.25rem 0 0;
+			padding: 2.45rem 3.75rem 0;
+		}
+
+		@include media('>=desktop') {
+			margin: -8.75rem 0 0;
+			padding: 2.5rem 4.125rem 0;
+		}
+
+		h1 {
+			margin: 0 0 1.25rem;
+
+			@include media('>=phone') {
+
+				margin: 0 0 .625rem;
+			}
+		}
+
+		p {
+			&:last-child {
+				margin: 0;
+			}
+		}
+
+		.subtitle {
+			margin: 0 0 1.875rem;
+		}
+	}
+}
+
+.banner-holder {
+	position: relative;
+	height: 420px;
+	z-index: -1;
+
+	@include media('>=phone') {
+		height: 600px;
+	}
+}

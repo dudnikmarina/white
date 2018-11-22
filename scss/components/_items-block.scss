@@ -1,0 +1,44 @@
+/* items block styles */
+.items-block {
+	padding: 3.75rem 0;
+
+	@include media('>=desktop') {
+		padding: 3.75rem 0;
+	}
+
+	h2 {
+		margin: 0 0 2.375rem;
+	}
+
+	.img-box {
+		padding: .3125rem 2.75rem 0 .9375rem;
+	}
+
+	.items-box-list:last-child {
+		margin-bottom: -1.812rem;
+
+		@include media('>=tablet') {
+			margin-bottom: -3rem;
+		}
+
+		@include media('>=desktop') {
+			margin-bottom: -1.75rem;
+		}
+	}
+}
+
+.item-box {
+	display: flex;
+	letter-spacing: normal;
+	margin: 0 0 1.25rem;
+
+	&:hover {
+		i {
+			transform: scale(1.2);
+		}
+	}
+}
+
+.title-item {
+	font-weight: 500;
+}

@@ -1,0 +1,57 @@
+/* desktop slider styles */
+.desktop-slider {
+	padding: 3.75rem 0;
+
+	@include media('<tablet') {
+		margin: 0 -15px;
+	}
+
+	> div {
+		&:last-child {
+			.bg-stretch {
+				@include media('<tablet') {
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	.slick-slide {
+		@include media('>=tablet') {
+			height: 360px;
+			position: relative;
+			overflow: hidden;
+		}
+
+		@include media('>=desktop') {
+			height: 720px;
+		}
+	}
+
+	.bg-stretch {
+		@include media('<tablet') {
+			position: static;
+			min-height: 15rem;
+			margin: 0 0 0.7rem;
+		}
+	}
+
+	.slick-dots {
+		@include center-content-h;
+		bottom: 1.875rem;
+	}
+
+	.slick-arrow {
+		@include media('>=tablet') {
+			left: 34px;
+			margin: 0;
+		}
+
+		&.slick-next {
+			@include media('>=tablet') {
+				left: auto;
+				right: 34px;
+			}
+		}
+	}
+}

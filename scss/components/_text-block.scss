@@ -1,0 +1,46 @@
+/* text block styles */
+.text-block {
+	padding: 3.75rem 0;
+
+	.blockquote {
+		font-size: $font-size-base;
+		padding: 1.8rem 1.25rem;
+
+		@include media('>=tablet') {
+			padding: 1.8rem 2.18rem;
+		}
+	}
+
+	.small {
+		letter-spacing: normal;
+	}
+
+	.subtitle {
+
+		@include media('<tablet') {
+			margin: 0 0 1.875rem;
+		}
+	}
+}
+
+/* block heading styles */
+.text-holder {
+	padding: 0 0 2.75rem;
+}
+
+.list-holder {
+	margin: 0 0 2.937rem;
+}
+
+.image-holder {
+	margin: 0 -1.875rem 3.75rem;
+
+	@include media('>=phone') {
+		margin: 0 0 3.75rem;
+	}
+
+	img {
+		width: 100%;
+	}
+}
+

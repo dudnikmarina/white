@@ -1,0 +1,83 @@
+// Typography
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+.h {
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+}
+
+h1, .h1 {
+	line-height: 1.67;
+	font-weight: 200;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+h2, .h2 {
+	margin: 0 0 .687rem;
+}
+
+h3, .h3 {
+	line-height: 1.67;
+}
+
+cite {
+	font-style: normal;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+mark {
+	background: 0;
+	padding: 0;
+}
+
+.subtitle {
+	display: block;
+	font-size: 1.25rem;
+	line-height: 1.5;
+	color: $primary;
+	margin: 0 0 1.25rem;
+}
+
+.title {
+	@extend .subtitle;
+	font-weight: 400;
+	margin: 0 0 .625rem;
+}
+
+.lead {
+	line-height: 1.67;
+}
+
+.small {
+	line-height: 2;
+}
+
+.blockquote {
+	margin: 0;
+	font-weight: 400;
+}
+
+.icon-holder {
+	display: block;
+
+	i {
+		@include animate(transform);
+		display: inline-block;
+		vertical-align: top;
+		color: $primary;
+		font-size: 2rem;
+		line-height: 1;
+	}
+}

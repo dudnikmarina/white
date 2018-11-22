@@ -1,0 +1,74 @@
+/* cases-secondary-block styles */
+.cases-secondary-block {
+	padding: 3.75rem 0;
+
+	h2 {
+		margin: 0 0 1.75rem;
+	}
+}
+
+.case-secondary-holder {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	text-decoration: none;
+	height: 100%;
+	padding: 1.25rem 0;
+	margin: 0 -1.875rem .625rem;
+
+	@include media('>=phone') {
+		margin: 0 0 .625rem;
+	}
+
+	@include media('>=desktop') {
+		margin: 0 .625rem .625rem 0;
+	}
+
+	&:hover {
+		.bg-stretch {
+			transform: scale(1.1) rotate(1.4deg);
+			opacity: .7;
+		}
+	}
+
+	&:after {
+		@include absolute;
+		content: '';
+		z-index: -1;
+		background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+	}
+
+	.bg-stretch {
+		transition: transform .8s ease-in-out, opacity .8s ease-in-out;
+		z-index: -1;
+	}
+}
+
+.case-inner {
+	text-decoration: none;
+	background: $white;
+	padding: 2rem 1.312rem 2.1rem;
+	margin: 0 .312rem 0;
+
+	@include media('<x-phone') {
+		margin: 0 0 0 15px;
+	}
+
+	.subtitle {
+		margin: 0;
+		font-size: .875rem;
+		line-height: 1.79;
+		text-transform: uppercase;
+		font-weight: normal;
+	}
+}
+
+.case-list {
+	[class*="col-"] {
+		flex-flow: column nowrap;
+	}
+
+	@include media('>=desktop') {
+		margin: 0 -15px -.625rem;
+	}
+}

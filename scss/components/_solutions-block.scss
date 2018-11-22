@@ -1,0 +1,25 @@
+/* solutions block styles */
+.solutions-block {
+	padding: 3.75rem 0;
+
+	.solutions-holder {
+		position: relative;
+		overflow: hidden;
+		padding: 1.875rem 0 0;
+		background: linear-gradient(#bfd7e1, #005b82);
+	}
+
+	.subtitle {
+		margin: 0 0 1.75rem;
+	}
+
+	.bg-parallax {
+		@include media('<desktop') {
+			display: none !important;
+		}
+	}
+
+	.text-holder {
+		padding: 0 0 3.75rem;
+	}
+}

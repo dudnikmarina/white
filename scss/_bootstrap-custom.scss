@@ -1,0 +1,163 @@
+// custom variables and override bootstrap variables
+
+//
+// Color system
+//
+$white:  #fff;
+$gray-100: #f2f2f2;
+$gray-200: #e6e6e6;
+$gray-300: #dee2e6 !default;
+$gray-400: #cccccc;
+$gray-500: #adb5bd !default;
+$gray-600: #999999;
+$gray-700: #495057 !default;
+$gray-800: #37424a;
+$gray-900: #212529 !default;
+$black:  #000 !default;
+
+$blue:    #005b82;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #579414;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+$colors: (
+	blue: $blue,
+	indigo: $indigo,
+	purple: $purple,
+	pink: $pink,
+	red: $red,
+	orange: $orange,
+	yellow: $yellow,
+	green: $green,
+	teal: $teal,
+	cyan: $cyan,
+	white: $white,
+	gray: $gray-600,
+	gray-dark: $gray-800
+);
+
+$primary:       $blue;
+$secondary:     $gray-600;
+$success:       $green;
+$info:          $cyan;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-100;
+$dark:          $gray-800;
+
+$theme-colors: (
+	primary: $blue,
+	secondary: $gray-600,
+	success: $green,
+	info: $cyan,
+	warning: $yellow,
+	danger: $red,
+	light: $gray-100,
+	dark: $gray-800
+);
+
+$spacer:   1rem !default;
+$spacers: (
+	0: 0,
+	1: ($spacer * .25),
+	2: ($spacer * .5),
+	3: $spacer,
+	4: ($spacer * 1.5),
+	5: ($spacer * 3),
+	6: ($spacer * 4.5),
+	7: ($spacer * 6),
+	8: ($spacer * 7.5),
+	9: ($spacer * 9),
+	10: ($spacer * 10.5)
+);
+
+$base-min-width: 320px;
+
+// This is the default html and body font-size for the base rem value.
+$rem-base: 16px;
+$line-height-base:            1.75;
+
+$font-family-sans-serif:      'Libre Franklin', "Helvetica Neue", Arial, sans-serif;
+$font-family-base: $font-family-sans-serif;
+
+$font-weight-light:           300;
+$font-weight-base:            $font-weight-light;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-color:                $gray-800;
+
+// Links
+//
+// Style anchor elements.
+$link-color:                $primary;
+$link-hover-color:          darken($link-color, 15%);
+$link-decoration:           underline;
+$link-hover-decoration:     none;
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+$h1-font-size:                2.25rem;
+$h2-font-size:                1.75rem;
+$h3-font-size:                1.5rem;
+$h4-font-size:                1.25rem;
+$h5-font-size:                1.1rem;
+$h6-font-size:                1rem;
+
+$headings-font-weight:        300;
+$headings-line-height:        1.43;
+$headings-color:              $primary;
+
+$lead-font-size:              1.125rem;
+$small-font-size:             0.875rem;
+
+$blockquote-font-size:        ($font-size-base * 1.5);
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 720px,
+  lg: 1024px,
+  xl: 1230px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 1024px,
+  xl: 1230px
+);
+
+$navbar-toggler-padding-y:          0;
+$navbar-toggler-padding-x:          0;
+$navbar-light-toggler-border-color: 0;
+
+$navbar-padding-y:                  0;
+$navbar-padding-x:                  0;
+
+$navbar-light-color:                $primary;
+$navbar-light-hover-color:          $success;
+$navbar-light-active-color:         $success;
+
+$border-color:                $gray-200;
+
+$input-border-color:                    $gray-400;
+$input-border-width:                    1px;
+$input-border-radius:                   0.125rem;
+$input-color:                           $gray-800;
+$input-placeholder-color:               $gray-800;
+$input-focus-border-color:              $gray-400;
+$input-focus-box-shadow:                0 0 0 0.2rem rgba($gray-400, .3);

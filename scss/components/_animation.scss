@@ -1,0 +1,116 @@
+@keyframes fade {
+	from {
+		transform: translateY(25px);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes NavFade {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@for $i from 1 through 30 {
+	.approach-list,
+	.cards-list,
+	.icons-box-list,
+	.items-box-list {
+		> *:nth-child(#{$i}) {
+			@include media('>=tablet') {
+				opacity: 0;
+			}
+		}
+	}
+	.in-viewport.approach-list,
+	.in-viewport.cards-list,
+	.in-viewport.icons-box-list,
+	.in-viewport.items-box-list, {
+		> *:nth-child(#{$i}) {
+			@include media('>=tablet') {
+				animation: fade .5s ($i * 0.1s) + .1s both;
+			}
+		}
+	}
+
+	.navbar-nav {
+		> *:nth-child(#{$i}) {
+			opacity: 0;
+		}
+	}
+	.nav-active .navbar-nav{
+		> *:nth-child(#{$i}) {
+			animation: NavFade .5s ($i * 0.1s) + .1s both;
+
+			i {
+				animation: bounce .5s ($i * 0.1s) + .1s both;
+			}
+		}
+
+		.nav-link {
+			&:hover {
+				i:before {
+					display: block;
+					animation: HoverScale .5s both !important;
+				}
+			}
+		}
+	}
+}
+
+@keyframes slideToLeft {
+	from {
+		transform: translate3d(100px, 0, 0);
+		opacity: 0;
+	}
+
+	to {
+		transform: translate3d(0px, 0, 0);
+		opacity: 1;
+	}
+}
+
+@keyframes slideToRight {
+	from {
+		transform: translate3d(-100px, 0, 0);
+		opacity: 0;
+	}
+
+	to {
+		transform: translate3d(0px, 0, 0);
+		opacity: 1;
+	}
+}
+
+@keyframes bounce {
+  0% {
+  	transform: scale(0);
+  }
+
+  50% {
+  	transform: scale(1.2);
+  }
+
+  100% {
+  	transform: scale(1);
+  }
+}
+
+@keyframes HoverScale {
+  from  {
+  	transform: scale(1);
+  }
+
+  to {
+  	transform: scale(1.2);
+  }
+}

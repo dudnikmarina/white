@@ -1,0 +1,61 @@
+body {
+	min-width: $base-min-width;
+	letter-spacing: .3px;
+}
+
+/* main container styles */
+#wrapper {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+}
+
+.container {
+	padding: 0 30px;
+
+	@include media('<desktop') {
+		max-width: none;
+	}
+
+	@include media('<x-phone') {
+		padding: 0 15px;
+	}
+}
+
+.container-fluid {
+	padding: 0 30px;
+
+	@include media('<x-phone') {
+		padding: 0 15px;
+	}
+}
+
+#main {
+	padding: 3rem 0 0;
+	
+	@include media('>=x-phone') {
+		padding: 4.375rem 0 0;
+	}
+}
+
+.bg-stretch {
+	@include absolute;
+	@include bg-styles;
+}
+
+/* parallax image */
+.bg-parallax {
+	@include absolute;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+	img {
+	    height: auto;
+	    position: absolute;
+	    width: auto;
+	}
+}
+
+.is-touch-device {
+    background-size: cover;
+}

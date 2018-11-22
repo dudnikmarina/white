@@ -1,0 +1,56 @@
+.contact-links-box {
+	@include animate(opacity visibility);
+	position: fixed;
+	right: 15px;
+	bottom: 0;
+	background: $success;
+	color: $white;
+	text-decoration: none;
+	z-index: 999;
+	padding: .8rem .5rem .4rem;
+	border-radius: .25rem .25rem 0 0;
+	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+
+	@include media('>=tablet') {
+		right: 0;
+		bottom: 30px;
+		border-radius: .25rem 0 0 .25rem;
+		padding: 1rem 1.1rem .81rem;
+	}
+
+	.nav-active & {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	&:hover,
+	&:focus {
+		color: $white;
+	}
+}
+
+.contact-links {
+	@extend %listreset;
+
+	@include media('<tablet') {
+		display: flex;
+		align-items: center;
+	}
+
+	@include media('>=tablet') {
+		margin: -15px 0;
+	}
+
+	li {
+		padding: 0 .8125rem;
+
+		@include media('>=tablet') {
+			padding: 15px 0;
+		}
+	}
+
+	i {
+		font-size: 1.5rem;
+		line-height: 1;
+	}
+}

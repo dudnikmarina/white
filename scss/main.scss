@@ -1,0 +1,69 @@
+$breakpoints: (
+	'xs-phone': 320px,
+	'x-phone': 360px,
+	'phone': 576px,
+	'tablet': 720px,
+	'desktop': 1024px,
+	'widescreen': 1230px
+);
+
+// keywords
+$media-expressions: (
+	'screen': 'screen',
+	'print': 'print',
+	'handheld': 'handheld',
+	'landscape': '(orientation: landscape)',
+	'portrait': '(orientation: portrait)',
+	'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+	'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+// ligatured operators ≥ ≤
+
+@import 'vendors/include-media';
+
+@import "vendors/bootstrap/functions";
+@import "vendors/bootstrap/variables";
+@import "vendors/bootstrap/mixins";
+
+@import "bootstrap-custom";
+
+@import 'base/functions';
+@import 'base/mixins';
+@import 'base/helpers';
+
+@import 'vendors/themify';
+@import 'vendors/slick';
+@import 'base/typography';
+@import 'vendors/jcf';
+
+@import 'layout/common';
+
+@import 'layout/header';
+
+@import 'components/buttons';
+@import 'components/animation';
+@import 'components/bullet-list';
+@import 'components/text-block';
+@import 'components/intro-section';
+@import 'components/main-slider';
+@import 'components/bg-video-vimeo';
+@import 'components/solutions-block';
+@import 'components/card';
+@import 'components/cases-block';
+@import 'components/approach-block';
+@import 'components/approach-list';
+@import 'components/blog-block';
+@import 'components/stack-block';
+@import 'components/contact-block';
+@import 'components/banner';
+@import 'components/full-image-block';
+@import 'components/info-block';
+@import 'components/desktop-slider';
+@import 'components/icons-block';
+@import 'components/quote-block';
+@import 'components/items-block';
+@import 'components/cases-secondary-block';
+@import 'components/form-section';
+@import 'components/checkerboard-block';
+@import 'components/contact-links';

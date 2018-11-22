@@ -1,0 +1,22 @@
+/* quote block styles */
+.quote-block {
+	padding: 2.5rem 0;
+
+	p {
+		margin: 0 0 .812rem;
+		line-height: 1.67;
+	}
+
+	.blockquote-holder {
+		padding: 1.85rem 1rem 1.75rem;
+	}
+}
+
+.blockquote-footer{
+	font-size: 1.125rem;
+	margin: 0 0 .937rem;
+
+	&:before {
+		content: " ";
+	}
+}

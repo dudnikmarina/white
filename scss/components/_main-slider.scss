@@ -1,0 +1,34 @@
+/* main slider styles */
+.main-slider {
+	padding: 0 0 3.75rem;
+
+	.slick-slide {
+		position: relative;
+		height: 520px;
+		overflow: hidden;
+
+		@include media('>=tablet') {
+			height: 640px;
+		}
+	}
+
+	.slick-dots {
+		@include center-content-h;
+		bottom: 1.875rem;
+	}
+
+	.slick-arrow {
+		left: 34px;
+
+		@include media('<tablet') {
+			display: none !important;
+		}
+
+		&.slick-next {
+			@include media('>=tablet') {
+				left: auto;
+				right: 34px;
+			}
+		}
+	}
+}

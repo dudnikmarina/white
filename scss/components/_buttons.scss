@@ -1,0 +1,30 @@
+.btn {
+	@include animate(color background border box-shadow);
+	font-size: 1.125rem;
+	padding: .375rem 1.28rem;
+	text-decoration: none;
+
+	&.btn-light {
+		background: $gray-100;
+		color: $primary;
+		border-color: transparent;
+
+		&:hover {
+			color: $success;
+		}
+	}
+}
+
+.link-down {
+	@include animate(color);
+	text-decoration: none;
+	color: $gray-200;
+	font-size: 2rem;
+	line-height: 1;
+}
+
+button {
+	&:focus {
+		outline: none;
+	}
+}

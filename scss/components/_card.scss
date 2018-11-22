@@ -1,0 +1,51 @@
+/* card styles */
+.card {
+	border: none;
+	border-radius: 0;
+	line-height: 2;
+	margin: 0 0 1.875rem;
+	height: 100%;
+
+	.img-box {
+		padding: 2.75rem 1.25rem 0;
+	}
+}
+
+.card-text {
+	letter-spacing: normal;
+}
+
+.card-body {
+	padding: 1.5em 1.18rem 3.1rem;
+}
+
+.card-title {
+	font-size: 1.25rem;
+	font-weight: normal;
+	line-height: 1.5;
+	margin: 0 0 .562rem;
+}
+
+.text-bottom {
+	display: block;
+	text-align: right;
+	font-size: .75rem;
+	font-weight: normal;
+	text-transform: uppercase;
+	color: $secondary;
+}
+
+/* card list styles */
+.cards-list {
+	[class*="col-"] {
+		flex-flow: column nowrap;
+	}
+
+	.card {
+		@include animate(transform);
+
+		&:hover {
+			transform: scale(1.04);
+		}
+	}
+}

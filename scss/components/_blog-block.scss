@@ -1,0 +1,103 @@
+/* blog block styles */
+.blog-block {
+	padding: 3.75rem 0;
+
+	@include media('<desktop') {
+		padding: 3.75rem 0 3.05rem;
+	}
+
+	.text-holder {
+		padding: 0 0 .625rem;
+
+		@include media('>=phone') {
+			padding: 0 0 1.25rem;
+		}
+	}
+}
+
+/* blog list styles */
+.blog-list {
+	margin: 0 -30px;
+
+	[class*="col-"] {
+		flex-flow: column nowrap;
+	}
+}
+
+.blog-holder {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	text-decoration: none;
+	padding: 4.375rem 0 1.8rem;
+	margin: 0 -15px .7rem;
+	height: 100%;
+
+	@include media('>=tablet') {
+		padding: 4.375rem 0 1.7rem;
+	}
+
+	@include media('>=desktop') {
+		padding: 1.875rem 0;
+		margin: 0 -15px;
+	}
+
+	&:hover {
+		.bg-stretch {
+			transform: scale(1.1) rotate(1.4deg);
+			opacity: .7;
+		}
+	}
+
+	&:after {
+		@include absolute;
+		content: '';
+		z-index: -1;
+		background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, .2));
+	}
+
+	.bg-stretch {
+		transition: transform .8s ease-in-out, opacity .8s ease-in-out;
+		z-index: -1;
+	}
+
+	.card {
+		margin: 0 .937rem;
+
+		@include media('>=phone') {
+			margin: 0 0 0 .937rem;
+		}
+
+		@include media('>=tablet') {
+			margin: 0 .937rem;
+		}
+	}
+
+	.subtitle {
+		font-size: 1.125rem;
+		line-height: 2.22;
+		font-weight: normal;
+		letter-spacing: .2px;
+		margin: 0 0 .562rem;
+
+		@include media('>=tablet') {
+			margin: 0 0 .312rem;
+		}
+
+		@include media('>=desktop') {
+			margin: 0 0 3.062rem;
+		}
+	}
+
+	.card-body {
+		padding: 1.062rem 1.25rem .8rem;
+
+		@include media('>=tablet') {
+			padding: 1.312rem 1.25rem .8rem;
+		}
+
+		@include media('>=desktop') {
+			padding: 1.187rem 1.25rem .75rem;
+		}
+	}
+}

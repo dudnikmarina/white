@@ -1,0 +1,113 @@
+/* checkerboard block styles */
+.checkerboard-block {
+	padding: 3.75rem 0;
+
+	.subtitle {
+		font-weight: normal;
+		margin: 0;
+
+		@include media('>=tablet') {
+			font-size: 1.5rem;
+			line-height: 1.67;
+			font-weight: 300;
+		}
+	}
+}
+
+.checkerboard-holder {
+	display: flex;
+	align-items: flex-end;
+	position: relative;
+	text-decoration: none;
+	margin: 0 -15px 10px;
+	height: 100%;
+	min-height: 22.5rem;
+	padding: 1.875rem 1.875rem;
+
+	@include media('>=tablet') {
+		align-items: stretch;
+		padding: 0;
+		margin: 0 -15px;
+	}
+
+	&:hover {
+		.bg-stretch {
+			transform: scale(1.1);
+			opacity: .7;
+		}
+	}
+
+	.bg-stretch {
+		transition: transform .8s ease-in-out, opacity .8s ease-in-out;
+		z-index: -1;
+	}
+
+	.checkerboard-image {
+		position: relative;
+		overflow: hidden;
+
+		@include media('<tablet') {
+			@include absolute;
+		}
+
+		@include media('>=tablet') {
+			width: 50%;
+		}
+	}
+
+	.checkerboard-inner {
+		width: 100%;
+		
+		@include media('>=tablet') {
+			width: 50%;
+		}
+	}
+}
+
+.checkerboard-text {
+	background: $white;
+	padding: 1.312rem 1.875rem;
+	display: flex;
+	align-items: center;
+	height: 100%;
+
+	@include media('>=tablet') {
+		padding: 3.75rem;
+	}
+}
+
+.checkerboard-list {
+	margin: 0 -30px;
+
+	[class*="col-"] {
+		flex-flow: column nowrap;
+
+		&:nth-child(2n) {
+			.checkerboard-holder {
+				@include media('>=tablet') {
+					flex-flow: row-reverse nowrap;
+				}
+
+				@include media('>=desktop') {
+					flex-flow: row nowrap;
+				}
+			}
+		}
+
+		&:nth-child(4n+3) {
+			.checkerboard-holder {
+				@include media('>=desktop') {
+					flex-flow: row-reverse nowrap;
+				}
+			}
+		}
+
+		&:nth-child(4n+4) {
+			.checkerboard-holder {
+				@include media('>=desktop') {
+					flex-flow: row-reverse nowrap;
+				}
+			}
+		}
+	}
+}

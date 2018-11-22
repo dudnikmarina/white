@@ -1,0 +1,88 @@
+/* info-block styles */
+.info-block {
+	padding: 3.75rem 0;
+
+	&.info-block-reverse {
+		.info-holder {
+			@include media('>=desktop') {
+				flex-direction: row-reverse;
+			}
+
+			&.in-viewport {
+				[class*="col-"]:first-child {
+					@include media('>=tablet') {
+						animation: slideToLeft .5s both;
+					}
+				}
+
+				[class*="col-"]:last-child  {
+					@include media('>=tablet') {
+						animation: slideToRight .5s both;
+					}
+				}
+			}
+
+			.info-text {
+				@include media('>=desktop') {
+					padding: 1.25rem 2.812rem 1.25rem 2rem;
+				}
+			}
+		}
+	}
+}
+
+.info-holder {
+	&.in-viewport {
+		[class*="col-"]:first-child {
+			@include media('>=tablet') {
+				animation: slideToRight .5s both;
+			}
+		}
+
+		[class*="col-"]:last-child  {
+			@include media('>=tablet') {
+				animation: slideToLeft .5s both;
+			}
+		}
+	}
+
+	[class*="col-"] {
+		@include media('>=tablet') {
+			opacity: 0;
+		}
+	}
+
+	.info-text {
+		padding: 0 0 .812rem;
+		letter-spacing: normal;
+
+		@include media('>=desktop') {
+			padding: 1.25rem 2.812rem 1.25rem 3.75rem;
+		}
+	}
+
+	h2 {
+		font-size: 1.5rem;
+		line-height: 1.67;
+	}
+}
+
+.info-image {
+	height: 100%;
+	min-height: 15rem;
+	position: relative;
+	margin: 0 -30px;
+
+	@include media('>=phone') {
+		min-height: 20.625rem;
+		margin: 0;
+	}
+
+	@include media('>=desktop') {
+		min-height: 17.812rem;
+	}
+
+	img {
+		width: 100%;
+	}
+}

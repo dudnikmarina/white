@@ -1,0 +1,47 @@
+ /* icons block styles */
+.icons-block {
+	padding: 3.75rem 0;
+	letter-spacing: normal;
+
+	.img-box {
+		padding: .94rem 2.75rem 0 .81rem;
+
+		@include media('>=desktop') {
+			padding: 0.75rem 0 2.125rem;
+		}
+	}
+
+	.icons-box-list:last-child {
+		margin-bottom: -2.687rem;
+
+		@include media('>=phone') {
+			margin-bottom: -3.875rem;
+		}
+
+		@include media('>=desktop') {
+			margin-bottom: -.937rem;
+		}
+	}
+}
+
+.icon-box {
+	text-align: left;
+	display: flex;
+	margin: 0 0 1.56rem;
+
+	@include media('>=phone') {
+		margin: 0 0 2.8rem;
+	}
+
+	@include media('>=desktop') {
+		display: block;
+		text-align: center;
+		margin: 0;
+	}
+
+	&:hover {
+		i {
+			transform: scale(1.2);
+		}
+	}
+}
